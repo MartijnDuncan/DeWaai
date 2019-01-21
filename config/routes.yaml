@@ -1,4 +1,4 @@
 index_action:
-  path: /index/number
+  path: /
   controller: App\Controller\IndexController::number
 
