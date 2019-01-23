@@ -8,13 +8,11 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class IndexController extends AbstractController {
     /**
-     * @Route("/index")
+     * @Route("/")
      */
-    public function number() {
-        $number = random_int(0,100);
+    public function index() {
 
-        return $this->render('number.html.twig', [
-            'number' => $number]
+        return $this->render('index.html.twig'
         );
 
     }

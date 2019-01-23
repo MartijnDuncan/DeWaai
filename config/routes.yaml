@@ -1,4 +1,4 @@
-index_action:
+index:
   path: /
-  controller: App\Controller\IndexController::number
+  controller: App\Controller\IndexController::index
 
