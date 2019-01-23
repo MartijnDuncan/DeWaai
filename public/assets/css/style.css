@@ -27,12 +27,12 @@ body {
 }
 
 .boat-block h1, .registration-block h1 {
-    color: #2A4B78;
+    color: #3E6DB1;
     font-size: 1.5rem !important;
 }
 
 .registration-block {
-
+    background-color: rgba(62, 109, 177, 0.3);
 }
 
 
