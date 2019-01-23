@@ -23,28 +23,38 @@
             {% block body %}
             {% endblock %}
         </div>
-            {% block javascripts %}
-                <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.js"></script>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/locales/bootstrap-datepicker.nl.min.js"></script>                <script>
-                    $('.datepicker').datepicker({
-                        format: 'dd-mm-yyyy',
-                        language: 'nl',
-                        startDate: '0',
-                        todayHighlight: true,
-                        todayBtn: true
-                    });
+        {% block footer %}
+            <div class="container-fluid bg-dewaai text-white">
+                <div class="row">
+                    <div class="col-4">
+                        <strong>
+                            Contactgegevens
+                        </strong>
+                    </div>
+                </div>
+            </div>
+        {% endblock %}
+        {% block javascripts %}
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/locales/bootstrap-datepicker.nl.min.js"></script>                <script>
+                $('.datepicker').datepicker({
+                    format: 'dd-mm-yyyy',
+                    language: 'nl',
+                    startDate: '0',
+                    todayHighlight: true,
+                    todayBtn: true
+                });
 
-                    $('.birthdate-picker').datepicker({
-                        format: 'dd-mm-yyyy',
-                        language: 'nl',
-                        todayHighlight: false,
-                        startView: '2'
-                    })
-                </script>
-            {% endblock %}
-        </div>
+                $('.birthdate-picker').datepicker({
+                    format: 'dd-mm-yyyy',
+                    language: 'nl',
+                    todayHighlight: false,
+                    startView: '2'
+                })
+            </script>
+        {% endblock %}
     </body>
 </html>
