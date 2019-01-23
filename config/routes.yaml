@@ -2,3 +2,6 @@ index:
   path: /
   controller: App\Controller\IndexController::index
 
+course:
+  path: cursussen
+  controller: App\Controller\PageController::course

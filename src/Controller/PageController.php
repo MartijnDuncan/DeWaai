@@ -6,7 +6,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
-class IndexController extends AbstractController {
+class PageController extends AbstractController {
     /**
      * @Route("/")
      */
@@ -15,5 +15,10 @@ class IndexController extends AbstractController {
         return $this->render('index.html.twig'
         );
 
+    }
+
+    public function course() {
+        return $this->render('course.html.twig'
+        );
     }
 }
