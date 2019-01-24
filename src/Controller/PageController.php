@@ -21,4 +21,5 @@ class PageController extends AbstractController {
         return $this->render('course.html.twig'
         );
     }
+    
 }

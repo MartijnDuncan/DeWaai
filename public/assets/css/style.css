@@ -20,6 +20,8 @@ body {
     background-size: cover;
     margin-left: auto;
     margin-right: auto;
+    text-align: center;
+    color: white;
 }
 
 .no-padding {
@@ -35,4 +37,23 @@ body {
     background-color: rgba(62, 109, 177, 0.3);
 }
 
-
+.mid h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    color: white;
+    text-transform: uppercase;
+    margin: 0;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    font-size: 3.5rem;
+    transform: translate(-50%, -50%);
+    text-shadow: 2px 2px black;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: black;
+    text-align: center;
+}
+.navbar {
+    padding: 1.1rem;
+}
