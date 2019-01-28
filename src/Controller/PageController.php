@@ -21,5 +21,10 @@ class PageController extends AbstractController {
         return $this->render('course.html.twig'
         );
     }
+
+    public function boats() {
+        return $this->render('boats.html.twig'
+        );
+    }
     
 }

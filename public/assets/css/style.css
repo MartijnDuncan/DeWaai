@@ -2,6 +2,14 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+footer a {
+    color: white;
+}
+
+footer a:hover {
+    color: #2A4B78;
+}
+
 .bg-dewaai {
     background-color: #2A4B78;
 }
@@ -69,9 +77,4 @@ body {
 }
 .navbar {
     padding: 1.1rem;
-}
-
-.navbar-fixed-top.scrolled {
-    background-color: #fff !important;
-    transition: background-color 200ms linear;
 }

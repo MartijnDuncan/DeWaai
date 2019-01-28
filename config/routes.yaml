@@ -5,3 +5,16 @@ index:
 course:
   path: cursussen/
   controller: App\Controller\PageController::course
+
+boats:
+  path: boten/
+  controller: App\Controller\PageController::boats
+
+contact:
+  path: contact/
+  controller: App\Controller\FormController::contact
+
+sign_in:
+  path: aanmelden/
+  controller: App\Controller\FormController::signIn
+

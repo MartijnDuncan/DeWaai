@@ -8,6 +8,7 @@
         {% block stylesheets %}
             <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.css">
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
             <link rel="stylesheet" href="../assets/css/style.css">
         {% endblock %}
         {% block fonts %}
@@ -26,15 +27,26 @@
             {% endblock %}
         </div>
         {% block footer %}
-            <div class="container-fluid bg-dewaai text-white">
-                <div class="row">
-                    <div class="col-4">
-                        <strong>
-                            Contactgegevens
-                        </strong>
+            <footer>
+                <div class="container-fluid bg-light">
+                    <div class="row">
+                        <div class="col-3 pt-3 pl-5">
+                            <h5>
+                                Contactgegevens
+                            </h5>
+                            Zeilschool De Waai <br />
+                            Windstraat 66 <br />
+                            8909 ZD Windschoten <br />
+                            <i class="fas fa-headset"></i> 0597 - 123456 <br />
+                            <i class="fab fa-whatsapp"></i> 06 - 12345678 <br />
+                            <i class="far fa-envelope"></i> <a href="mailto:info@zeilschooldewaai.nl">info@zeilschooldewaai.nl</a>
+                        </div>
+                        <div class="col-4 pt-3">
+
+                        </div>
                     </div>
                 </div>
-            </div>
+            </footer>
         {% endblock %}
         {% block javascripts %}
             <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
