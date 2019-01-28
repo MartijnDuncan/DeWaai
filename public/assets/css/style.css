@@ -72,11 +72,3 @@ body {
 .navbar {
     padding: 1.1rem;
 }
-<<<<<<< HEAD
-=======
-
-.navbar-fixed-top.scrolled {
-    background-color: #fff !important;
-    transition: background-color 200ms linear;
-}
->>>>>>> 26c3951ea419f1b3c387812d497e862e1bf850bd
