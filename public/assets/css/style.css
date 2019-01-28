@@ -74,6 +74,8 @@ footer a:hover {
 .navbar-light .navbar-nav .nav-link {
     color: black;
     text-align: center;
+    text-transform: uppercase;
+
 }
 .navbar {
     padding: 1.1rem;
