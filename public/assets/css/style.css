@@ -80,3 +80,31 @@ footer a:hover {
 .navbar {
     padding: 1.1rem;
 }
+
+.footer-bg {
+    background-color: #dbdee0;
+}
+
+footer h1 {
+    color: #3E6DB1;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+}
+
+footer a {
+    color: black;
+}
+
+footer a:hover {
+    transition: 0.2s;
+    color: #3E6DB1;
+    text-decoration: none;
+}
+
+.fa-facebook:hover {
+     color: #3b5998;
+}
+
+.fa-twitter:hover {
+    color: #1da1f2;
+}
