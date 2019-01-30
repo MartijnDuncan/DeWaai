@@ -36,5 +36,9 @@ class PageController extends AbstractController {
         return $this->render('course-info.html.twig'
         );
     }
+    public function contact() {
+        return $this->render('contact.html.twig'
+        );
+    }
     
 }

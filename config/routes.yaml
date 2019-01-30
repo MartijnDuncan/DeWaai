@@ -16,9 +16,11 @@ boats:
 
 contact:
   path: contact/
-  controller: App\Controller\FormController::contact
+  controller: App\Controller\PageController::contact
 
 signin:
   path: signin/
   controller: App\Controller\PageController::signin
+
+
 
