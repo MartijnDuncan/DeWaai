@@ -5,17 +5,33 @@
     <div class="row p-5">
         <div class="col-4">
             <div class="list-group" id="list-tab" role="tablist">
-                <a class="list-group-item list-group-item-action active" id="list-CursusA-list" data-toggle="list" href="#list-CursusA" role="tab" aria-controls="CursusA">Cursus A</a>
-                <a class="list-group-item list-group-item-action" id="list-CursusB-list" data-toggle="list" href="#list-CursusB" role="tab" aria-controls="CursusB">Cursus B</a>
-                <a class="list-group-item list-group-item-action" id="list-CursusC-list" data-toggle="list" href="#list-CursusC" role="tab" aria-controls="messages">Cursus C</a>
+                <a class="list-group-item list-group-item-action active course" id="courseA" data-toggle="list" href="#list-CursusA" role="tab" aria-controls="CursusA">Cursus A</a>
+                <a class="list-group-item list-group-item-action course" id="course-b" data-toggle="list" href="#list-CursusB" role="tab" aria-controls="CursusB">Cursus B</a>
+                <a class="list-group-item list-group-item-action course" id="course-c" data-toggle="list" href="#list-CursusC" role="tab" aria-controls="messages">Cursus C</a>
             </div>
         </div>
         <div class="col-8">
             <div class="tab-content" id="nav-tabContent">
                 <div class="tab-pane fade show active" id="list-CursusA" role="tabpanel" aria-labelledby="list-CursusA-list">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integ</div>
-                <div class="tab-pane fade" id="list-CursusB" role="tabpanel" aria-labelledby="list-CursusB-list">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integ</div>
+                <div class="tab-pane fade" id="list-CursusB" role="tabpanel" aria-labelledby="list-CursusB-list">Lorem ipsum dolor sit amet, kut adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integ</div>
                 <div class="tab-pane fade" id="list-CursusC" role="tabpanel" aria-labelledby="list-CursusC-list">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integ</div>
             </div>
         </div>
     </div>
+{% endblock %}
+
+{% block javascripts %}
+    <script>
+        alert('hallo?');
+        $(document).ready(function(){
+            $(".course").click(function(event){
+                var bttn_id = event.target.id;
+                alert(bttn_id);
+
+                $.ajax({url: "{{ path('course_info', { 'id': ''}) }}", success: function(result){
+                        $("#list-CursusA").html(result);
+                }});
+            });
+        });
+    </script>
 {% endblock %}

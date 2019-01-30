@@ -31,5 +31,10 @@ class PageController extends AbstractController {
         return $this->render('signin.html.twig'
         );
     }
+
+    public function courseInfo() {
+        return $this->render('course-info.html.twig'
+        );
+    }
     
 }
