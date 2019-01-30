@@ -6,6 +6,10 @@ course:
   path: cursussen/
   controller: App\Controller\PageController::course
 
+course_info:
+  path: cursus-info/
+  controller: App\Controller\PageController::courseInfo
+
 boats:
   path: boten/
   controller: App\Controller\PageController::boats
