@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div class="container contact-form">
+        <form method="post">
+            <h3>Stuur uw bericht</h3>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input type="text" name="txtName" class="form-control" placeholder="Voornaam *" value="" />
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="txtLastname" class="form-control" placeholder="Achternaam *" value="" />
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="txtEmail" class="form-control" placeholder="Email *" value="" />
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" name="btnSubmit" class="btn btn-primary" value="Verstuur" />
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <textarea name="txtMessage" class="form-control" placeholder="Uw Bericht *" style="width: 100%; height: 150px;"></textarea>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div id="map-container-google-12" class="z-depth-1-half map-container-7" style="height: 200px">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d38532.49922344067!2d5.727863647662988!3d52.87135004971819!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c88b059e1d9e35%3A0x7dc31409a15f86bf!2sOosterzee!5e0!3m2!1snl!2snl!4v1548855447343" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+
+{% endblock %}
