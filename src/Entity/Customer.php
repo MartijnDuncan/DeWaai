@@ -76,6 +76,70 @@ class Customer
     }
 
     /**
+     * @ORM\Column(type="date")
+     */
+    private $birthDate;
+
+    /**
+     * @return mixed
+     */
+    public function getBirthDate()
+    {
+        return $this->birthDate;
+    }
+
+    /**
+     * @param mixed $birthDate
+     */
+    public function setBirthDate($birthDate): void
+    {
+        $this->birthDate = $birthDate;
+    }
+
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $gender;
+
+    /**
+     * @return mixed
+     */
+    public function getGender()
+    {
+        return $this->gender;
+    }
+
+    /**
+     * @param mixed $gender
+     */
+    public function setGender($gender): void
+    {
+        $this->gender = $gender;
+    }
+
+    /**
+     * @ORM\Column(type="string", length=160)
+     */
+    private $city;
+
+    /**
+     * @return mixed
+     */
+    public function getCity()
+    {
+        return $this->city;
+    }
+
+    /**
+     * @param mixed $city
+     */
+    public function setCity($city): void
+    {
+        $this->city = $city;
+    }
+
+
+    /**
      * @ORM\Column(type="string", length=160)
      */
     private $address;
@@ -190,6 +254,4 @@ class Customer
     {
         $this->mail = $mail;
     }
-
-
 }
