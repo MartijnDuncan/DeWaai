@@ -60,4 +60,29 @@ class Boats
     {
         return $this->boatImage;
     }
+
+    /**
+     * @param mixed $boatName
+     */
+    public function setBoatName($boatName): void
+    {
+        $this->boatName = $boatName;
+    }
+
+    /**
+     * @param mixed $boatDesc
+     */
+    public function setBoatDesc($boatDesc): void
+    {
+        $this->boatDesc = $boatDesc;
+    }
+
+    /**
+     * @param mixed $boatImage
+     */
+    public function setBoatImage($boatImage): void
+    {
+        $this->boatImage = $boatImage;
+    }
+
 }

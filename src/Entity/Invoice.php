@@ -38,6 +38,7 @@ class Invoice
 
     /**
      * @ORM\Column(type="integer")
+     * @ORM\ManyToOne(targetEntity="App\Entity\Reservations")
      */
     private $registrationID;
 
@@ -85,4 +86,46 @@ class Invoice
     {
         return $this->invoicePayed;
     }
+
+    /**
+     * @param mixed $invoiceNumber
+     */
+    public function setInvoiceNumber($invoiceNumber): void
+    {
+        $this->invoiceNumber = $invoiceNumber;
+    }
+
+    /**
+     * @param mixed $clientID
+     */
+    public function setClientID($clientID): void
+    {
+        $this->clientID = $clientID;
+    }
+
+    /**
+     * @param mixed $courseID
+     */
+    public function setCourseID($courseID): void
+    {
+        $this->courseID = $courseID;
+    }
+
+    /**
+     * @param mixed $registrationID
+     */
+    public function setRegistrationID($registrationID): void
+    {
+        $this->registrationID = $registrationID;
+    }
+
+    /**
+     * @param mixed $invoicePayed
+     */
+    public function setInvoicePayed($invoicePayed): void
+    {
+        $this->invoicePayed = $invoicePayed;
+    }
+
+
 }
