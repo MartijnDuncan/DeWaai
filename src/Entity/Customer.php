@@ -70,7 +70,7 @@ class Customer
      * @return mixed
      */
     public function verifyPassword()
-    {g
+    {
         return $this->password;
     }
 
