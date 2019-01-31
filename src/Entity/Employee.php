@@ -59,15 +59,9 @@ class Employee
     /**
      * @ORM\Column(type="string", length=80)
      */
-    private $password;
+    private $verifyPassword;
 
-    /**
-     * @return mixed
-     */
-    public function getPassword()
-    {
-        return $this->password;
-    }
+
     /**
      * @ORM\Column(type="integer", length=20)
      */
@@ -106,12 +100,22 @@ class Employee
     }
 
     /**
-     * @param mixed $password
+     * @return mixed
      */
-    public function setPassword($password): void
+    public function getVerifyPassword()
     {
-        $this->password = $password;
+        return $this->verifyPassword;
     }
+
+    /**
+     * @param mixed $verifyPassword
+     */
+    public function setVerifyPassword($verifyPassword): void
+    {
+        $this->verifyPassword = $verifyPassword;
+    }
+
+
 
     /**
      * @param mixed $authLevel
