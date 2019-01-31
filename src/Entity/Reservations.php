@@ -13,6 +13,7 @@ class Reservations
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
+     * @ORM\OneToMany(targetEntity="App\Entity\Invoice", mappedBy="Reservations")
      */
     private $id;
 
@@ -86,4 +87,46 @@ class Reservations
     {
         return $this->completed;
     }
+
+    /**
+     * @param mixed $courseID
+     */
+    public function setCourseID($courseID): void
+    {
+        $this->courseID = $courseID;
+    }
+
+    /**
+     * @param mixed $clientID
+     */
+    public function setClientID($clientID): void
+    {
+        $this->clientID = $clientID;
+    }
+
+    /**
+     * @param mixed $reservedSpots
+     */
+    public function setReservedSpots($reservedSpots): void
+    {
+        $this->reservedSpots = $reservedSpots;
+    }
+
+    /**
+     * @param mixed $reservedDate
+     */
+    public function setReservedDate($reservedDate): void
+    {
+        $this->reservedDate = $reservedDate;
+    }
+
+    /**
+     * @param mixed $completed
+     */
+    public function setCompleted($completed): void
+    {
+        $this->completed = $completed;
+    }
+
+
 }
