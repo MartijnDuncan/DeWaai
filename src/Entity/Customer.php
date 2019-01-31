@@ -126,4 +126,70 @@ class Customer
     {
         return $this->mail;
     }
+
+    /**
+     * @param mixed $customerID
+     */
+    public function setCustomerID($customerID): void
+    {
+        $this->customerID = $customerID;
+    }
+
+    /**
+     * @param mixed $firstName
+     */
+    public function setFirstName($firstName): void
+    {
+        $this->firstName = $firstName;
+    }
+
+    /**
+     * @param mixed $lastName
+     */
+    public function setLastName($lastName): void
+    {
+        $this->lastName = $lastName;
+    }
+
+    /**
+     * @param mixed $password
+     */
+    public function setPassword($password): void
+    {
+        $this->password = $password;
+    }
+
+    /**
+     * @param mixed $address
+     */
+    public function setAddress($address): void
+    {
+        $this->address = $address;
+    }
+
+    /**
+     * @param mixed $zipcode
+     */
+    public function setZipcode($zipcode): void
+    {
+        $this->zipcode = $zipcode;
+    }
+
+    /**
+     * @param mixed $phone
+     */
+    public function setPhone($phone): void
+    {
+        $this->phone = $phone;
+    }
+
+    /**
+     * @param mixed $mail
+     */
+    public function setMail($mail): void
+    {
+        $this->mail = $mail;
+    }
+
+
 }
