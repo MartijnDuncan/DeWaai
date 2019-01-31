@@ -22,20 +22,20 @@ class PageController extends AbstractController {
 
         $form = $this->createFormBuilder($register)
 //            ->add('date', DateType::class)
-            ->add('firstName', TextType::class)
-            ->add('lastName', TextType::class)
+            ->add('firstName', TextType::class, ['label' => 'Voornaam'])
+            ->add('lastName', TextType::class, ['label' => 'Achternaam'])
             ->add('gender', ChoiceType::class, [
                 'choices' => [
                     'Man' => true,
                     'Vrouw' => false,
-                ],
+                ],'label' => 'Geslacht'
             ])
-            ->add('birthDate', DateType::class)
-            ->add('address', TextType::class)
-            ->add('zipcode', TextType::class)
-            ->add('city', TextType::class)
-            ->add('phone', TextType::class)
-            ->add('mail', TextType::class)
+            ->add('birthDate', DateType::class, ['label' => 'Geboortedatum'])
+            ->add('address', TextType::class, ['label' => 'Adres'])
+            ->add('zipcode', TextType::class, ['label' => 'Postcode'])
+            ->add('city', TextType::class, ['label' => 'Stad'])
+            ->add('phone', TextType::class, ['label' => 'Telefoonnummer'])
+            ->add('mail', TextType::class, ['label' => 'Email'])
             ->add('save', SubmitType::class, ['label' => 'Inschrijven'])
             ->getForm();
 
