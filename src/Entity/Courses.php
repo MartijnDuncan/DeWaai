@@ -13,6 +13,7 @@ class Courses
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
+     * @ORM\OneToMany(targetEntity="App\Entity\Invoice", mappedBy="Courses")
      */
     private $id;
 
@@ -35,6 +36,7 @@ class Courses
     }
     /**
      * @ORM\Column(type="integer", length=20)
+     * @ORM\OneToMany(targetEntity="App\Entity\Boats", mappedBy="Courses")
      */
     private $boatType;
 

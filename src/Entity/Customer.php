@@ -13,6 +13,7 @@ class Customer
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
+     * @ORM\OneToMany(targetEntity="App\Entity\Invoice", mappedBy="Customer")
      */
     private $id;
 
@@ -69,7 +70,7 @@ class Customer
      * @return mixed
      */
     public function verifyPassword()
-    {
+    {g
         return $this->password;
     }
 

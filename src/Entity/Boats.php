@@ -13,10 +13,11 @@ class Boats
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
+     * @ORM\ManyToOne(targetEntity="App\Entity\Courses")
      */
     private $id;
 
-    public function getId(): ?int
+    public function getId()
     {
         return $this->id;
     }
