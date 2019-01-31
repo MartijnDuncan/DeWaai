@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Customer;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
@@ -10,7 +11,12 @@ class PageController extends AbstractController {
     /**
      * @Route("/")
      */
-    public function index() {
+    public function index(Request $request) {
+        $register = new Customer();
+        $register->setFirstName('Voornaam');
+        $register->setLastName('Achternaam');
+
+
 
         return $this->render('index.html.twig'
         );
