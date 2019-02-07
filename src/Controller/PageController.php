@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Customer;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -21,7 +22,6 @@ class PageController extends AbstractController {
         $register = new Customer();
 
         $form = $this->createFormBuilder($register)
-//            ->add('date', DateType::class)
             ->add('firstName', TextType::class, ['label' => 'Voornaam'])
             ->add('lastName', TextType::class, ['label' => 'Achternaam'])
             ->add('gender', ChoiceType::class, [
@@ -30,7 +30,9 @@ class PageController extends AbstractController {
                     'Vrouw' => false,
                 ],'label' => 'Geslacht'
             ])
-            ->add('birthDate', DateType::class, ['label' => 'Geboortedatum'])
+            ->add('birthDate', DateType::class, [
+                'label' => 'Geboortedatum',
+            ])
             ->add('address', TextType::class, ['label' => 'Adres'])
             ->add('zipcode', TextType::class, ['label' => 'Postcode'])
             ->add('city', TextType::class, ['label' => 'Stad'])
@@ -39,13 +41,42 @@ class PageController extends AbstractController {
             ->add('save', SubmitType::class, ['label' => 'Inschrijven'])
             ->getForm();
 
+        $form->handleRequest($request);
 
+        if ($form->isSubmitted() && $form->isValid()) {
+            $register = $form->getData();
+
+            $customer = new Customer();
+//            $customer->setFirstName($register->getFirstName);
+//            $customer->setLastName('lastName');
+//            $customer->setGender('gender');
+//            $customer->setBirthDate('birthDate');
+//            $customer->setAddress('address');
+//            $customer->setZipCode('zipcode');
+//            $customer->setCity('city');
+//            $customer->setPhone('phone');
+//            $customer->setMail('mail');
+
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->persist($register);
+            $entityManager->flush();
+
+
+            return $this->redirectToRoute('/');
+        }
 
         return $this->render('index.html.twig', [
             'form' => $form->createView(),
             ]
         );
 
+    }
+
+    public function submitRegistration() {
+//        $entityManager = $this->getDoctrine()->getManager();
+//
+//        $customer = new Customer();
+//        $product->setFirstName($form('first'))
     }
 
     public function course() {
