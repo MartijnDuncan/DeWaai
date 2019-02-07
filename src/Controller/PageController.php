@@ -71,5 +71,9 @@ class PageController extends AbstractController {
         return $this->render('contact.html.twig'
         );
     }
+    public function admin() {
+        return $this->render('admin.html.twig'
+        );
+    }
     
 }

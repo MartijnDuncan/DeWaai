@@ -22,5 +22,9 @@ signin:
   path: signin/
   controller: App\Controller\PageController::signin
 
+admin:
+  path: admin/
+  controller: App\Controller\PageController::admin
+
 
 
